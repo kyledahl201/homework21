@@ -1,3 +1,11 @@
+var express = require("express")
+var mongoose = require("mongoose")
+var routes = require("./routes")
+
+var app = express()
+var port = 3001 
+
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Serve up static assets (usually on heroku)
