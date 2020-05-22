@@ -15,7 +15,7 @@ if (process.env.NODE_ENV === "production") {
 // Add routes, both API and view
 app.use(routes);
 
-// Connect to the Mongo DB
+// Connect to the Mongo DB using mLab
 mongoose.connect(process.env.MONGODB_URI || "mongodb://kyle:password1@ds143071.mlab.com:43071/heroku_s8r3tpb3");
 
 // Start the API server
