@@ -3,7 +3,7 @@ var mongoose = require("mongoose")
 var routes = require("./routes")
 
 var app = express()
-var PORT = (process.env.PORT || 3001)
+const PORT = process.env.PORT || 3001;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
