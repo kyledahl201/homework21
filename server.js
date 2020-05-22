@@ -3,7 +3,7 @@ var mongoose = require("mongoose")
 var routes = require("./routes")
 
 var app = express()
-var port = 3001 
+var PORT = 3001 
 
 
 app.use(express.urlencoded({ extended: true }));
@@ -16,7 +16,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactcms");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/books");
 
 // Start the API server
 app.listen(PORT, function() {
